@@ -1,6 +1,29 @@
-def main():
-    print("Hello from 7starweb!")
-
-
-if __name__ == "__main__":
-    main()
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 七星在线学习平台</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <h2>欢迎登录</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="用户名/邮箱" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="密码" required>
+                    <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                </div>
+                <button type="submit" class="btn-primary">登录</button>
+            </form>
+            <p class="switch-link">没有账号？<a href="register.html">立即注册</a></p>
+            <div id="errorMsg" class="error-message"></div>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>
